@@ -2,42 +2,16 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مدير الروابط الخاص بي </title>
+    <title>تطبيقاتي</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; background: #f4f4f9; text-align: center; }
-        .card { background: #fff; padding: 20px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        input { width: 80%; padding: 10px; margin: 10px 0; }
-        button { padding: 10px; cursor: pointer; margin: 5px; }
+        body { font-family: sans-serif; background: #f0f2f5; text-align: center; padding: 20px; }
+        .btn { display: block; background: #007bff; color: white; padding: 20px; margin: 15px auto; border-radius: 15px; text-decoration: none; font-size: 20px; font-weight: bold; width: 90%; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
     </style>
 </head>
 <body>
-<div class="card">
-    <h1>مدير الروابط</h1>
-    <input type="text" id="linkInput" placeholder="ضع الرابط هنا...">
-    <br>
-    <button onclick="saveLink()">حفظ الرابط</button>
-    <button onclick="exportLinks()">تصدير الروابط (تحميل)</button>
-    <div id="linkList"><h3>الروابط:</h3></div>
-</div>
-<script>
-    function saveLink() {
-        let input = document.getElementById("linkInput");
-        let list = document.getElementById("linkList");
-        if(input.value) {
-            let p = document.createElement("p");
-            p.innerText = input.value;
-            list.appendChild(p);
-            input.value = "";
-        }
-    }
-    function exportLinks() {
-        let links = Array.from(document.querySelectorAll('#linkList p')).map(p => p.innerText).join('\n');
-        let blob = new Blob([links], {type: 'text/plain'});
-        let a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'my-links.txt';
-        a.click();
-    }
-</script>
+    <h1>مرحباً أحمد</h1>
+    <a href="#" class="btn">محفظة النصوص</a>
+    <a href="#" class="btn">مشغل الصوتيات</a>
 </body>
 </html>
